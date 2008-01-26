@@ -1,7 +1,7 @@
 #summary Notes on getting asdoc to work with Flash CS3.
 
 = ASDoc? =
-[http://labs.adobe.com/wiki/index.php/ASDoc ASDoc] is Adobe's tool for generating HTML documentation from special inline ActionScript comments (much like [http://java.sun.com/j2se/javadoc/ Javadoc] and [http://www.stack.nl/~dimitri/doxygen/ Doxygen]). It is released as a part of the free [http://labs.adobe.com/technologies/flex/sdk/ Flex SDK] and runs on Windows, Linux, and Mac OSX.
+[http://labs.adobe.com/wiki/index.php/ASDoc ASDoc] is Adobe's tool for generating HTML documentation from special inline !ActionScript comments (much like [http://java.sun.com/j2se/javadoc/ Javadoc] and [http://www.stack.nl/~dimitri/doxygen/ Doxygen]). It is released as a part of the free [http://labs.adobe.com/technologies/flex/sdk/ Flex SDK] and runs on Windows, Linux, and Mac OSX.
 
 The problem, however, is that ASDoc was written with Flex in mind, not Flash. In particular, ASDoc tries to run whatever source you give it through Flex's compiler. Since _flashgraph_ is not (yet?) intended for use in Flex, this causes some issues. Luckily, these are mainly of the linking variety and can be sidestepped with a few tricks.
 
