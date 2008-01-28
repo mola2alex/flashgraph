@@ -1,0 +1,35 @@
+#!/bin/bash
+
+FLEXDIR=~/flex2_sdk_hf1
+ASDOC=$FLEXDIR/bin/asdoc
+ASDOCTEMPLATES=$FLEXDIR/asdoc/templates
+
+if [ ! -x $ASDOC ]; then
+    echo "Unable to find the asdoc binary at $ASDOC."
+    echo "You may need to edit the paths in the builddoc script."
+    exit 1
+fi 
+
+if [ ! -d mathlib ]; then
+    echo "This tool must be run from the root of the source tree."
+    exit 1
+fi
+
+if [ -d doc ]; then
+    rm -rf doc
+fi
+
+echo "If you get a ton of seemingly inexplicable errors from asdoc, make sure "
+echo "the paths in buildoc/flex-config.xml are valid on your machine."
+echo
+
+$ASDOC \
+    -source-path . \
+    -load-config builddoc/flex-config.xml \
+    -templates-path $ASDOCTEMPLATES \
+    -main-title "flashgraph API Documentation" \
+    -package mathlib.expr "An evaluator for infix mathematical expressions." \
+    -package mathlib.expr.datatype "Datatypes used internally by the expression parser." \
+    -package mathlib.grapher "A component for drawing graphs of functions of one variable." \
+    -output doc \
+    -doc-sources mathlib
