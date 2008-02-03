@@ -39,7 +39,10 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 </table>
 <p></p>
-<p></p>
+ Encapsulates the options to <code>Graphics.lineStyle()</code>. This object
+ is used to specify how to draw the graphs of functions and lines in the
+ FnGraph and PtGraph classes.
+ <p></p>
 <br>
 <hr>
 </div>
@@ -95,14 +98,16 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
 <a class="signatureLink" href="#LineStyle()">LineStyle</a>(n_thickness:Number, n_color:uint = 0, n_alpha:Number = 1.0, n_pixelHinting:Boolean = false, n_scaleMode:String = "normal", n_caps:String = null, n_joints:String = null, n_miterLimit:Number = 3)</div>
-<div class="summaryTableDescription"></div>
+<div class="summaryTableDescription">
+  Creates a new LineStyle object.</div>
 </td><td class="summaryTableOwnerCol">LineStyle</td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
 <a class="signatureLink" href="#apply()">apply</a>(gr:Graphics):void</div>
-<div class="summaryTableDescription"></div>
+<div class="summaryTableDescription">
+  Apply the LineStyle to the given Graphics instance.</div>
 </td><td class="summaryTableOwnerCol">LineStyle</td>
 </tr>
 </table>
@@ -116,12 +121,12 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#Hairline">Hairline</a> : <a href="../grapher/LineStyle.html">LineStyle</a>
-<div class="summaryTableDescription">[static]</div>
+<div class="summaryTableDescription">[static] A solid black hairline.</div>
 </td><td class="summaryTableOwnerCol">LineStyle</td>
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#OnePt">OnePt</a> : <a href="../grapher/LineStyle.html">LineStyle</a>
-<div class="summaryTableDescription">[static]</div>
+<div class="summaryTableDescription">[static] A 1px solid black line.</div>
 </td><td class="summaryTableOwnerCol">LineStyle</td>
 </tr>
 </table>
@@ -214,7 +219,10 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function LineStyle(n_thickness:Number, n_color:uint = 0, n_alpha:Number = 1.0, n_pixelHinting:Boolean = false, n_scaleMode:String = "normal", n_caps:String = null, n_joints:String = null, n_miterLimit:Number = 3)</code><span class="label">Parameters</span>
+<code>public function LineStyle(n_thickness:Number, n_color:uint = 0, n_alpha:Number = 1.0, n_pixelHinting:Boolean = false, n_scaleMode:String = "normal", n_caps:String = null, n_joints:String = null, n_miterLimit:Number = 3)</code><p>
+  Creates a new LineStyle object. The arguments are identical to those
+  to <code>Graphics.lineStyle()</code>, so see there for details.
+  </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="20px"></td><td><code><span class="label">n_thickness</span>:Number</code></td>
@@ -272,7 +280,10 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function apply(gr:Graphics):void</code><span class="label">Parameters</span>
+<code>public function apply(gr:Graphics):void</code><p>
+  Apply the LineStyle to the given Graphics instance. This makes a call
+  to <code>gr.lineStyle()</code> with the appropriate arguments.
+  </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="20px"></td><td><code><span class="label">gr</span>:Graphics</code></td>
@@ -288,8 +299,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static const Hairline:<a href="../grapher/LineStyle.html">LineStyle</a></code>
-</div>
+<code>public static const Hairline:<a href="../grapher/LineStyle.html">LineStyle</a></code><p> A solid black hairline. </p></div>
 <a name="OnePt"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -297,8 +307,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static const OnePt:<a href="../grapher/LineStyle.html">LineStyle</a></code>
-</div>
+<code>public static const OnePt:<a href="../grapher/LineStyle.html">LineStyle</a></code><p> A 1px solid black line. </p></div>
 <br>
 <br>
 <hr>
