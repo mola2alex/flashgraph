@@ -3,6 +3,7 @@
 FLEXDIR=~/flex2_sdk_hf1
 ASDOC=$FLEXDIR/bin/asdoc
 ASDOCTEMPLATES=$FLEXDIR/asdoc/templates
+DEST=doc
 
 if [ ! -x $ASDOC ]; then
     echo "Unable to find the asdoc binary at $ASDOC."
@@ -15,9 +16,9 @@ if [ ! -d mathlib ]; then
     exit 1
 fi
 
-if [ -d doc ]; then
-    rm -rf doc
-fi
+#if [ -d $DEST ]; then
+#    rm -rf $DEST
+#fi
 
 echo "If you get a ton of seemingly inexplicable errors from asdoc, make sure "
 echo "the paths in buildoc/flex-config.xml are valid on your machine."
@@ -31,5 +32,5 @@ $ASDOC \
     -package mathlib.expr "An evaluator for infix mathematical expressions." \
     -package mathlib.expr.datatype "Datatypes used internally by the expression parser." \
     -package mathlib.grapher "A component for drawing graphs of functions of one variable." \
-    -output doc \
+    -output $DEST \
     -doc-sources mathlib

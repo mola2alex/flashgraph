@@ -55,6 +55,7 @@ package mathlib.expr {
 		* @throws SyntaxError <code>SyntaxError</code>: The given expression is
 		*  not valid. The <code>message</code> member of the exception contains
 		*  a hint at what went wrong.
+		* @see Lexer#lex
 		*/
 		public static function parse(_tokens:Array):ParseTree {
 			var pt:ParseTree;
