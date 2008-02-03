@@ -112,11 +112,13 @@ package {
 		function updateFn():void {
 			compFn = Compiler.compile(expEnv, fnText.text);
 
-			// Remove the old graph if there was one.
-			if(fnGraph)	grapher.removeGraph(fnGraph);
+			// Add a new graph if one didn't already exist (the first time we're
+			// called).
+			if(!fnGraph)
+				fnGraph = grapher.addFnGraph(compFn.eval, fnGraphLineStyle);
 		
-			// Add a graph of the compiled function.
-			fnGraph = grapher.addFnGraph(compFn.eval, fnGraphLineStyle)
+			// Otherwise just update the function.
+			fnGraph.fn = compFn.eval;
 		}
 		
 		

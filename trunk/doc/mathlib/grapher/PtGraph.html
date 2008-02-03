@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="PtGraph,mathlib.grapher.PtGraph,parentGrapher,lineStyle,pts,connected,showPoints,addPoint" name="keywords">
+<meta content="PtGraph,mathlib.grapher.PtGraph,parentGrapher,lineStyle,pts,connected,showPoints,addPoint,redraw" name="keywords">
 <title>mathlib.grapher.PtGraph</title>
 </head>
 <body>
@@ -75,11 +75,12 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#parentGrapher">parentGrapher</a> : <a href="../grapher/Grapher2D.html">Grapher2D</a>
-<div class="summaryTableDescription"> The grapher into which this object is drawn.</div>
+<div class="summaryTableDescription">[read-only] The grapher into which this object is drawn.</div>
 </td><td class="summaryTableOwnerCol">PtGraph</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#pts">pts</a> : Array<div class="summaryTableDescription"> The array of <code>flash.geom.Point</code>s to be drawn.</div>
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#pts">pts</a> : Array<div class="summaryTableDescription">
+  The array of <code>flash.geom.Point</code>s to be drawn.</div>
 </td><td class="summaryTableOwnerCol">PtGraph</td>
 </tr>
 <tr class="">
@@ -98,7 +99,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#PtGraph()">PtGraph</a>(_parentGrapher:<a href="Grapher2D.html">Grapher2D</a>, _pts:Array, _connected:Boolean = true, _showPoints:Boolean = true, _lineStyle:<a href="LineStyle.html">LineStyle</a> = null)</div>
+<a class="signatureLink" href="#PtGraph()">PtGraph</a>(n_parentGrapher:<a href="Grapher2D.html">Grapher2D</a>, n_pts:Array, n_connected:Boolean = true, n_showPoints:Boolean = true, n_lineStyle:<a href="LineStyle.html">LineStyle</a> = null)</div>
 <div class="summaryTableDescription">
   Create a new PtGraph object.</div>
 </td><td class="summaryTableOwnerCol">PtGraph</td>
@@ -109,6 +110,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <a class="signatureLink" href="#addPoint()">addPoint</a>(graphx:Number, graphy:Number):void</div>
 <div class="summaryTableDescription">
   Add a new point to the end of the list and redraw the graph.</div>
+</td><td class="summaryTableOwnerCol">PtGraph</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#redraw()">redraw</a>():void</div>
+<div class="summaryTableDescription">
+  Redraw the graph.</div>
 </td><td class="summaryTableOwnerCol">PtGraph</td>
 </tr>
 </table>
@@ -127,7 +136,13 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public var connected:Boolean</code><p> True if the points should be draw with lines connecting them. </p></div>
+<code>connected:Boolean</code>&nbsp;&nbsp;[read-write]<p> True if the points should be draw with lines connecting them. </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get connected():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set connected(value:Boolean):void</code>
+<br>
+</div>
 <a name="lineStyle"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -135,11 +150,17 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public var lineStyle:<a href="../grapher/LineStyle.html">LineStyle</a></code><p>
+<code>lineStyle:<a href="../grapher/LineStyle.html">LineStyle</a></code>&nbsp;&nbsp;[read-write]<p>
   The style of line to use for drawing connecting lines if
   <code>connected</code> is true and for the points if
   <code>showPoints</code> is true.
-  </p></div>
+  </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get lineStyle():<a href="../grapher/LineStyle.html">LineStyle</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set lineStyle(value:<a href="../grapher/LineStyle.html">LineStyle</a>):void</code>
+<br>
+</div>
 <a name="parentGrapher"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -147,7 +168,11 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public var parentGrapher:<a href="../grapher/Grapher2D.html">Grapher2D</a></code><p> The grapher into which this object is drawn. </p></div>
+<code>parentGrapher:<a href="../grapher/Grapher2D.html">Grapher2D</a></code>&nbsp;&nbsp;[read-only]<p> The grapher into which this object is drawn. </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get parentGrapher():<a href="../grapher/Grapher2D.html">Grapher2D</a></code>
+<br>
+</div>
 <a name="pts"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -155,7 +180,18 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public var pts:Array</code><p> The array of <code>flash.geom.Point</code>s to be drawn. </p></div>
+<code>pts:Array</code>&nbsp;&nbsp;[read-write]<p>
+  The array of <code>flash.geom.Point</code>s to be drawn. If you
+  modify elements of this array you should call <code>redraw()</code> to
+  update the display. If you assign to the property, the redraw will be
+  handled automatically.
+  </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get pts():Array</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set pts(value:Array):void</code>
+<br>
+</div>
 <a name="showPoints"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -163,7 +199,13 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public var showPoints:Boolean</code><p> True if small circles should be drawn for each point. </p></div>
+<code>showPoints:Boolean</code>&nbsp;&nbsp;[read-write]<p> True if small circles should be drawn for each point. </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get showPoints():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set showPoints(value:Boolean):void</code>
+<br>
+</div>
 <a name="constructorDetail"></a>
 <div class="detailSectionHeader">Constructor detail</div>
 <a name="PtGraph()"></a>
@@ -173,14 +215,14 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function PtGraph(_parentGrapher:<a href="Grapher2D.html">Grapher2D</a>, _pts:Array, _connected:Boolean = true, _showPoints:Boolean = true, _lineStyle:<a href="LineStyle.html">LineStyle</a> = null)</code><p>
+<code>public function PtGraph(n_parentGrapher:<a href="Grapher2D.html">Grapher2D</a>, n_pts:Array, n_connected:Boolean = true, n_showPoints:Boolean = true, n_lineStyle:<a href="LineStyle.html">LineStyle</a> = null)</code><p>
   Create a new PtGraph object. There should never be a reason to call
   this; instead, use the <code>addPtGraph()</code> method of an instance
   of Grapher2D. 
   </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">_parentGrapher</span>:<a href="Grapher2D.html">Grapher2D</a></code> &mdash; The Grapher2D instance with which this graph is
+<td width="20px"></td><td><code><span class="label">n_parentGrapher</span>:<a href="Grapher2D.html">Grapher2D</a></code> &mdash; The Grapher2D instance with which this graph is
    associated.
   </td>
 </tr>
@@ -188,31 +230,31 @@ showHideInherited();
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">_pts</span>:Array</code> &mdash; An array of <code>flash.geom.Point</code>s to be drawn.
+<td width="20px"></td><td><code><span class="label">n_pts</span>:Array</code> &mdash; An array of <code>flash.geom.Point</code>s to be drawn.
   </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">_connected</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; True to draw lines connecting the points in order of
-   their appearance in <code>_pts</code>
+<td width="20px"></td><td><code><span class="label">n_connected</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; True to draw lines connecting the points in order
+   of their appearance in <code>_pts</code>
   </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">_showPoints</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; True to draw a small circle at the location of each
-   point. Note: if <code>connected</code> and this property are both
-   false, there will be nothing to draw.
+<td width="20px"></td><td><code><span class="label">n_showPoints</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; True to draw a small circle at the location of
+   each point. Note: if <code>connected</code> and this property are
+   both false, there will be nothing to draw.
   </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">_lineStyle</span>:<a href="LineStyle.html">LineStyle</a></code> (default = <code>null</code>)<code></code> &mdash; The style of line to use for drawing connecting
+<td width="20px"></td><td><code><span class="label">n_lineStyle</span>:<a href="LineStyle.html">LineStyle</a></code> (default = <code>null</code>)<code></code> &mdash; The style of line to use for drawing connecting
    lines if <code>connected</code> is true and for points if
    <code>showPoints</code> is true. If its value is <code>null</code>,
    <code>LineStyle.Hairline</code> is used.
@@ -254,6 +296,16 @@ showHideInherited();
 </tr>
 </table>
 </div>
+<a name="redraw()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">redraw</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function redraw():void</code><p>
+  Redraw the graph.
+  </p></div>
 <br>
 <br>
 <hr>

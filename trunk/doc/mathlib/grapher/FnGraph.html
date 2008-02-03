@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="FnGraph,mathlib.grapher.FnGraph,parentGrapher,lineStyle,fn" name="keywords">
+<meta content="FnGraph,mathlib.grapher.FnGraph,parentGrapher,lineStyle,fn,redraw" name="keywords">
 <title>mathlib.grapher.FnGraph</title>
 </head>
 <body>
@@ -72,7 +72,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#parentGrapher">parentGrapher</a> : <a href="../grapher/Grapher2D.html">Grapher2D</a>
-<div class="summaryTableDescription"> The grapher into which this object is drawn.</div>
+<div class="summaryTableDescription">[read-only] The grapher into which this object is drawn.</div>
 </td><td class="summaryTableOwnerCol">FnGraph</td>
 </tr>
 </table>
@@ -87,9 +87,16 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#FnGraph()">FnGraph</a>(_parentGrapher:<a href="Grapher2D.html">Grapher2D</a>, _fn:Function, _lineStyle:<a href="LineStyle.html">LineStyle</a> = null)</div>
+<a class="signatureLink" href="#FnGraph()">FnGraph</a>(n_parentGrapher:<a href="Grapher2D.html">Grapher2D</a>, n_fn:Function, n_lineStyle:<a href="LineStyle.html">LineStyle</a> = null)</div>
 <div class="summaryTableDescription">
   Creates a new FnGraph object.</div>
+</td><td class="summaryTableOwnerCol">FnGraph</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#redraw()">redraw</a>():void</div>
+<div class="summaryTableDescription"> Redraw the graph.</div>
 </td><td class="summaryTableOwnerCol">FnGraph</td>
 </tr>
 </table>
@@ -108,7 +115,13 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public var fn:Function</code><p> The function to be graphed. </p></div>
+<code>fn:Function</code>&nbsp;&nbsp;[read-write]<p> The function to be graphed. </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get fn():Function</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set fn(value:Function):void</code>
+<br>
+</div>
 <a name="lineStyle"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -116,7 +129,13 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public var lineStyle:<a href="../grapher/LineStyle.html">LineStyle</a></code><p> The line style to use for the function graph. </p></div>
+<code>lineStyle:<a href="../grapher/LineStyle.html">LineStyle</a></code>&nbsp;&nbsp;[read-write]<p> The line style to use for the function graph. </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get lineStyle():<a href="../grapher/LineStyle.html">LineStyle</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set lineStyle(value:<a href="../grapher/LineStyle.html">LineStyle</a>):void</code>
+<br>
+</div>
 <a name="parentGrapher"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -124,7 +143,11 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public var parentGrapher:<a href="../grapher/Grapher2D.html">Grapher2D</a></code><p> The grapher into which this object is drawn. </p></div>
+<code>parentGrapher:<a href="../grapher/Grapher2D.html">Grapher2D</a></code>&nbsp;&nbsp;[read-only]<p> The grapher into which this object is drawn. </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get parentGrapher():<a href="../grapher/Grapher2D.html">Grapher2D</a></code>
+<br>
+</div>
 <a name="constructorDetail"></a>
 <div class="detailSectionHeader">Constructor detail</div>
 <a name="FnGraph()"></a>
@@ -134,14 +157,14 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function FnGraph(_parentGrapher:<a href="Grapher2D.html">Grapher2D</a>, _fn:Function, _lineStyle:<a href="LineStyle.html">LineStyle</a> = null)</code><p>
+<code>public function FnGraph(n_parentGrapher:<a href="Grapher2D.html">Grapher2D</a>, n_fn:Function, n_lineStyle:<a href="LineStyle.html">LineStyle</a> = null)</code><p>
   Creates a new FnGraph object. End-users should never have reason to
   call this; instead, use the <code>addFnGraph()</code> method of a 
   Grapher2D instance.
   </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">_parentGrapher</span>:<a href="Grapher2D.html">Grapher2D</a></code> &mdash; The Grapher2D instance with which this graph
+<td width="20px"></td><td><code><span class="label">n_parentGrapher</span>:<a href="Grapher2D.html">Grapher2D</a></code> &mdash; The Grapher2D instance with which this graph
    is associated.
   </td>
 </tr>
@@ -149,7 +172,7 @@ showHideInherited();
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">_fn</span>:Function</code> &mdash; The function to graph. This function must be capable of
+<td width="20px"></td><td><code><span class="label">n_fn</span>:Function</code> &mdash; The function to graph. This function must be capable of
    being called with one Number argument and must return a Number.
   </td>
 </tr>
@@ -157,7 +180,7 @@ showHideInherited();
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">_lineStyle</span>:<a href="LineStyle.html">LineStyle</a></code> (default = <code>null</code>)<code></code> &mdash; The line style to use when drawing the graph of the
+<td width="20px"></td><td><code><span class="label">n_lineStyle</span>:<a href="LineStyle.html">LineStyle</a></code> (default = <code>null</code>)<code></code> &mdash; The line style to use when drawing the graph of the
    function. If it is given as <code>null</code>,
    <code>LineStyle.Hairline</code> is used.
   </td>
@@ -172,6 +195,16 @@ showHideInherited();
 <a href="LineStyle.html#Hairline" target="">LineStyle.Hairline</a>
 </div>
 </div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="redraw()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">redraw</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function redraw():void</code><p> Redraw the graph. </p></div>
 <br>
 <br>
 <hr>
