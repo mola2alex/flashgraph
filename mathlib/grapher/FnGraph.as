@@ -7,37 +7,32 @@
 	* @see Grapher2D#addFnGraph()
 	*/
 	public class FnGraph extends Sprite {
-		/** The grapher into which this object is drawn. */
-		public var parentGrapher:Grapher2D;
-
-		/** The line style to use for the function graph. */
-		public var lineStyle:LineStyle = LineStyle.Hairline;
-
-		/** The function to be graphed. */
-		public var fn:Function;
+		private var _parent:Grapher2D;
+		private var _lineStyle:LineStyle;
+		private var _fn:Function;
 
 		/**
 		* Creates a new FnGraph object. End-users should never have reason to
 		* call this; instead, use the <code>addFnGraph()</code> method of a 
 		* Grapher2D instance.
-		* @param _parentGrapher The Grapher2D instance with which this graph
+		* @param n_parentGrapher The Grapher2D instance with which this graph
 		*  is associated.
-		* @param _fn The function to graph. This function must be capable of
+		* @param n_fn The function to graph. This function must be capable of
 		*  being called with one Number argument and must return a Number.
-		* @param _lineStyle The line style to use when drawing the graph of the
+		* @param n_lineStyle The line style to use when drawing the graph of the
 		*  function. If it is given as <code>null</code>,
 		*  <code>LineStyle.Hairline</code> is used.
 		* @see Grapher2D#addFnGraph()
 		* @see LineStyle#Hairline
 		*/
-		public function FnGraph(_parentGrapher:Grapher2D, _fn:Function, _lineStyle:LineStyle = null):void {
+		public function FnGraph(n_parentGrapher:Grapher2D, n_fn:Function, n_lineStyle:LineStyle = null):void {
 			super();
 
-			fn = _fn;
-			parentGrapher = _parentGrapher;
+			_fn = n_fn;
+			_parent = n_parentGrapher;
 			
-			if(_lineStyle == null) lineStyle = LineStyle.Hairline;
-			else lineStyle = _lineStyle;
+			if(n_lineStyle == null) _lineStyle = LineStyle.Hairline;
+			else _lineStyle = n_lineStyle;
 
 			// If we don't do this, the double click event won't bubble up to
 			// the parent grapher if the user double clicks directly on the
@@ -55,33 +50,33 @@
 			// parentGrapher.dx is the ratio of real on-screen pixels to a
 			// distance of 1 in graph units, so this value is the distance
 			// between samples we want to take.
-			const xstep:Number = 1 / (parentGrapher.xres * parentGrapher.dx);
+			const xstep:Number = 1 / (_parent.xres * _parent.dx);
 			var curx:Number, cury:Number;
 			var oldx:Number, oldy:Number;
 
-			lineStyle.apply(graphics);
+			_lineStyle.apply(graphics);
 
 			// Todo: better handling of discontinuities somehow
 
-			oldx = parentGrapher.xmin;
-			oldy = fn(oldx);
+			oldx = _parent.xmin;
+			oldy = _fn(oldx);
 
-			for(curx = parentGrapher.xmin + xstep;
-				curx <= parentGrapher.xmax + xstep; // We go one past in case xres is low
+			for(curx = _parent.xmin + xstep;
+				curx <= _parent.xmax + xstep; // We go one past in case xres is low
 				curx += xstep)
 			{
-				cury = fn(curx);
+				cury = _fn(curx);
 				
 				// If both points are numbers (i.e., not an overflow or NaN),
 				// and if the segment would actually be visible in the graph,
 				// draw it.
-				if(parentGrapher.isDrawableY(oldy) &&
-				   parentGrapher.isDrawableY(cury) &&
-				   !parentGrapher.isSegmentOutside(cury, oldy))
+				if(_parent.isDrawableY(oldy) &&
+				   _parent.isDrawableY(cury) &&
+				   !_parent.isSegmentOutside(cury, oldy))
 				{
 					// See the comment below about the role of truncateY.
-					parentGrapher.graphMoveTo(graphics, oldx, truncateY(oldy));
-					parentGrapher.graphLineTo(graphics, curx, truncateY(cury));
+					_parent.graphMoveTo(graphics, oldx, truncateY(oldy));
+					_parent.graphLineTo(graphics, curx, truncateY(cury));
 				}
 				
 				oldx = curx;
@@ -89,11 +84,8 @@
 			}
 		}
 		
-		/**
-		* @private
-		* Draw the graph, clearing the display first.
-		*/
-		internal function redraw():void {
+		/** Redraw the graph. */
+		public function redraw():void {
 			graphics.clear();
 			draw();
 		}
@@ -104,9 +96,29 @@
 		// shouldn't notice this (it'll just be on the last sample before it
 		// jumps out of sight).
 		private function truncateY(cury:Number):Number {
-			if(cury > parentGrapher.ymax) return parentGrapher.ymax;
-			if(cury < parentGrapher.ymin) return parentGrapher.ymin;
+			if(cury > _parent.ymax) return _parent.ymax;
+			if(cury < _parent.ymin) return _parent.ymin;
 			return cury;
+		}
+
+
+		/** The grapher into which this object is drawn. */
+		public function get parentGrapher():Grapher2D { return _parent; }
+		
+		/** The line style to use for the function graph. */
+		public function get lineStyle():LineStyle { return _lineStyle; }
+		/** @private */
+		public function set lineStyle(n_lineStyle:LineStyle):void {
+			_lineStyle = n_lineStyle;
+			redraw();
+		}
+		
+		/** The function to be graphed. */
+		public function get fn():Function { return _fn; }
+		/** @private */
+		public function set fn(n_fn:Function):void {
+			_fn = n_fn;
+			redraw();
 		}
 	}
 }
