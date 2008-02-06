@@ -122,8 +122,15 @@ showHideInherited();
 </table>
 <div class="detailBody">
 <code>public var isLeaf:Boolean</code><p> True if the node is a leaf (i.e., it has no children). This is
-  maintained to save frequent checking of <code>children.length</code>.
-  </p></div>
+  maintained by <code>appendChild()</code> to save frequent checking of
+  <code>children.length</code>.
+  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../datatype/ParseTree.html#appendChild()" target="">appendChild()</a>
+</div>
+</div>
 <a name="token"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -178,6 +185,12 @@ showHideInherited();
   </td>
 </tr>
 </table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../datatype/ParseTree.html#isLeaf" target="">isLeaf</a>
+</div>
 </div>
 <a name="toString()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">

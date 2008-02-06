@@ -9,7 +9,9 @@
 		public var token:Token;
 		
 		/** True if the node is a leaf (i.e., it has no children). This is
-		* maintained to save frequent checking of <code>children.length</code>.
+		* maintained by <code>appendChild()</code> to save frequent checking of
+		* <code>children.length</code>.
+		* @see #appendChild()
 		*/
 		public var isLeaf:Boolean;
 
@@ -33,6 +35,7 @@
 		* Add a child to this node by appending it to <code>children</code>.
 		* This function also sets <code>isLeaf</code> to false.
 		* @param _t The ParseTree that will become the rightmost child.
+		* @see #isLeaf
 		*/
 		public function appendChild(_t:ParseTree):void {
 			if(isLeaf) {

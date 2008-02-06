@@ -42,6 +42,8 @@ package mathlib.expr {
 	*  [Arguments] ::= [Expression]
 	*                 | [Expression] [comma] [Arguments]
 	* </pre>
+	*
+	* @see mathlib.expr.datatype.TokenType
 	*/
 	public class Parser {
 		/** A local copy of the tokens we're working on. */

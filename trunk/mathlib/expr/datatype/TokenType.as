@@ -24,31 +24,31 @@
 		/** Right parenthesis */
 		public static const RP:TokenType = new TokenType(")");
 
-		/** Comma */
+		/** Comma. */
 		public static const COMMA:TokenType = new TokenType(",");
 
-		/** Addition operation */
+		/** Addition operator. */
 		public static const ADDOP:TokenType = new TokenType("addition operator");
 
-		/** Multiplication operation */
+		/** Multiplication operator. */
 		public static const MULOP:TokenType = new TokenType("multiplication operator");
 
-		/** Function application */
+		/** Function name. */
 		public static const FN:TokenType = new TokenType("function");
 
-		/** Constant name */
+		/** Constant name. */
 		public static const CONST:TokenType = new TokenType("constant");
 
-		/** Variable name */
+		/** Variable name. */
 		public static const VAR:TokenType = new TokenType("variable");
 
-		/** Literal number */
+		/** Literal number. */
 		public static const NUM:TokenType = new TokenType("number");
 
-		/** Prefix negation operator */
+		/** Prefix negation operator. */
 		public static const NEGATE:TokenType = new TokenType("negate");
 
-		/** Exponentiation operator (^) */
+		/** Exponentiation operator (^). */
 		public static const POW:TokenType = new TokenType("exponentiation");
 	}
 }
