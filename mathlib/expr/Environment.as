@@ -10,12 +10,14 @@ package mathlib.expr {
 		/**
 		* Map of function names to Function objects. Members can be added with
 		* with the <code>addFn</code> method.
+		* @see #addFn()
 		*/
 		public var fns:Dictionary = new Dictionary();
 		
 		/**
 		* Map of constant names to their Number values. Members can be added
 		* with the <code>addConst</code> method.
+		* @see #addConst()
 		*/
 		public var consts:Dictionary = new Dictionary();
 		
@@ -23,6 +25,7 @@ package mathlib.expr {
 		* Map of strings to binary Functions. These are operators having the
 		* same precedence as addition (+, -). Members can be added with the
 		* <code>addAddOp</code> method.
+		* @see #addAddOp()
 		*/
 		public var addops:Dictionary = new Dictionary();
 
@@ -30,6 +33,7 @@ package mathlib.expr {
 		* Map of strings to binary Functions. These are operators having the
 		* same precedence as multiplication (~~, /). Members can be added with
 		* the <code>addMulOp</code> method.
+		* @see #addMulOp()
 		*/
 		public var mulops:Dictionary = new Dictionary();
 		
@@ -38,6 +42,7 @@ package mathlib.expr {
 		* by both variable name and their integral index. Members can be added
 		* in the constructor or with the <code>addVar</code> and
 		* <code>addVars</code> methods.
+		* @see #addVars()
 		*/
 		public var vars:Dictionary = new Dictionary();
 
@@ -194,6 +199,8 @@ package mathlib.expr {
 		* <code>ArgumentError</code> will be thrown.
 		* @throws ArgumentError <code>ArgumentError</code>: The variable name is
 		*  invalid or conflicts with another identifier.
+		* @see #isKnownId()
+		* @see #isValidId()
 		*/
 		public function addVar(varName:String):void {
 			dieIfBadId(varName);
@@ -212,6 +219,7 @@ package mathlib.expr {
 		*  <code>addVar</code>.
  		* @throws ArgumentError <code>ArgumentError</code>: A variable name is
 		*  invalid or conflicts with another identifier.
+		* @see #addVar()
 		*/
 		public function addVars(varNames:Array):void {
 			var varName:String;
@@ -232,6 +240,8 @@ package mathlib.expr {
 		*  accepting a variable number of arguments may not work as intended.
  		* @throws ArgumentError <code>ArgumentError</code>: The function name is
 		*  invalid or conflicts with another identifier.
+		* @see #isKnownId()
+		* @see #isValidId()
 		*/
 		public function addFn(fnName:String, fn:Function):void {
 			dieIfBadId(fnName);
@@ -248,6 +258,8 @@ package mathlib.expr {
 		* @param constVal The value of the constant.
  		* @throws ArgumentError <code>ArgumentError</code>: The constant name is
 		*  invalid or conflicts with another identifier.
+		* @see #isKnownId()
+		* @see #isValidId()
 		*/
 		public function addConst(constName:String, constVal:Number):void {
 			dieIfBadId(constName);
@@ -270,6 +282,7 @@ package mathlib.expr {
 		*  variable number of arguments may not work as intended.
  		* @throws ArgumentError <code>ArgumentError</code>: The operator name
 		*  conflicts with another identifier or <code>fn</code> is not binary.
+		* @see #isKnownId()
 		*/		
 		public function addAddOp(opName:String, fn:Function):void {
 			dieIfBadOp(opName, fn);
@@ -292,6 +305,7 @@ package mathlib.expr {
 		*  variable number of arguments may not work as intended.
  		* @throws ArgumentError <code>ArgumentError</code>: The operator name
 		*  conflicts with another identifier or <code>fn</code> is not binary.
+		* @see #isKnownId()
 		*/
 		public function addMulOp(opName:String, fn:Function):void {
 			dieIfBadOp(opName, fn);

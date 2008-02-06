@@ -8,7 +8,8 @@
 		/**
 		* The (possibly unset) value of the token. The meaning of this field
 		* depends on the type. The tokens for left parenthesis, right
-		* parenthesis, comma, negate and exponentiantion do not hold extra data.
+		* parenthesis, comma, negate and exponentiation do not hold extra data.
+		* @see TokenType
 		*/
 		public var val:*;
 		
@@ -16,7 +17,7 @@
 		* Creates a new Token instance.
 		* @param _type The type of the token.
 		* @param _val Token-specific extra data. For example, Tokens of type
-		*  <codE>NUM</code> contain the Number value of the token.
+		*  <code>NUM</code> contain the Number value of the token.
 		*/
 		public function Token(_type:TokenType, _val:* = undefined):void {
 			type = _type;

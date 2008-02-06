@@ -48,6 +48,8 @@ package mathlib.expr {
 		*  <code>eval()</code> with no arguments.
 		* @throws ArgumentError <code>ArgumentError</code>: Received the wrong
 		*  number of arguments.
+		* @throws SyntaxError <code>SyntaxError</code>: There is an error in the
+		*  <code>prefixArray</code>.
 		*/
 		public function eval(... varVals):Number {
 			var i:int, argCount:int = varVals.length;
@@ -69,6 +71,8 @@ package mathlib.expr {
 		* @param varVals An array of Number values.
 		* @throws ArgumentError <code>ArgumentError</code>: Received the wrong
 		*  number of arguments.
+		* @throws SyntaxError <code>SyntaxError</code>: There is an error in the
+		*  <code>prefixArray</code>.
 		*/
 		public function evalWithArray(varVals:Array):Number {
 			return eval.apply(this, varVals);
@@ -130,7 +134,7 @@ package mathlib.expr {
 				}
 			}
 	
-			throw new Error("unexpected element in compiled function array: " + head.toString());
+			throw new SyntaxError("unexpected element in compiled function array: " + head.toString());
 		}
 		
 	}

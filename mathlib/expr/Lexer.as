@@ -131,7 +131,7 @@ package mathlib.expr {
 				pushNewToken(TokenType.MULOP, env.implicitMulOp)
 		}
 		
-		/** Remove spaces fromthe given string. */
+		/** Remove spaces from the given string. */
 		private static function eatSpaces(str:String):String {
 			return str.replace(/\s/g, "");
 		}
