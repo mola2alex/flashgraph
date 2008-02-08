@@ -102,7 +102,7 @@ The `Compiler.compile()` method we have been using thus far is really just a wra
 
 From there, the [http://flashgraph.googlecode.com/svn/trunk/doc/mathlib/expr/Parser.html#parse() Parser.parse() method] attempts to assign meaning to the flat `Token` array by applying rules of the grammar to generate a [http://flashgraph.googlecode.com/svn/trunk/doc/mathlib/expr/datatype/ParseTree.html ParseTree]. This converts things like "x + y" into a tree with `+` at the root and `x` and `y` as children.
 
-The last step is to convert the `ParseTree` into a more usable form. This is done by the [http://flashgraph.googlecode.com/svn/trunk/doc/mathlib/expr/Compiler.html#compileParseTree() Compiler.compileParseTree()] method, which does a simple prefix walk of the ParseTree, accumulating the results in a new `CompiledFn`.  See [http://en.wikipedia.org/wiki/Polish_notation the Wikipedia page on Polish Notation] for why we'd want to do this.
+The last step is to convert the `ParseTree` into a more usable form. This is done by the [http://flashgraph.googlecode.com/svn/trunk/doc/mathlib/expr/Compiler.html#compileParseTree() Compiler.compileParseTree()] method, which does a simple prefix walk of the !ParseTree, accumulating the results in a new `CompiledFn`.  See [http://en.wikipedia.org/wiki/Polish_notation the Wikipedia page on Polish Notation] for why we'd want to do this.
 
 If the `optimize` parameter to `compileParseTree()` is true, the compiler takes the extra step of collapsing constant subtrees to their numeric values. For instance, if the string "max(15 `*` 2 + 22, x)" was given, the optimizing step would convert "15 `*` 2 + 22" to 52. This saves time when re-evaluating the compiled function.
 
