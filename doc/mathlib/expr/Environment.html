@@ -302,7 +302,9 @@ showHideInherited();
 <td width="20px"></td><td><code>... <span class="label">args</span></code> &mdash; The constructor may be given no arguments, an array of
    Strings, or a list of Strings. In the first case, no independent
    variable names are set up. In the latter cases, the given strings 
-   are passed along to the <code>addVars</code> method.
+   are passed along to the <code>addVars</code> method. See the
+   documentation for <code>isValidId</code> for details on valid
+   variable names.
     <p>The following functions are present in a default Environment:
    <table class="innertable"><th>Function</th><th>Corresponding ActionScript</th><th>Meaning</th>
    <tr><td><code>sin(x)</code></td><td><code>Math.sin(x)</code></td><td>The sine of <code>x</code> where <code>x</code> is in radians</td></tr>
@@ -349,9 +351,17 @@ showHideInherited();
 <tr>
 <td width="20"></td><td><code></code> &mdash; <code>ArgumentError</code>: A variable name is
    invalid or conflicts with another identifier.
-  </td>
+    </td>
 </tr>
 </table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../expr/Environment.html#addVars()" target="">addVars()</a>
+<br>
+<a href="../expr/Environment.html#isValidId()" target="">isValidId()</a>
+</div>
 <br>
 <span class="label">Example</span>
 <br>The following code results in three equivalent Environments.
