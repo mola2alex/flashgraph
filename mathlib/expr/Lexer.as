@@ -40,6 +40,7 @@ package mathlib.expr {
 		* @throws SyntaxError <code>SyntaxError</code>: An unknown token was
 		*  encountered. The <code>message</code> member of the exception gives
 		*  more detail about the error.
+		* @see mathlib.expr.datatype.Token
 		*/
 		public static function lex(_env:Environment, _s:String):Array {
 			env = _env;
