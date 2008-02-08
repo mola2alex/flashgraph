@@ -1,4 +1,5 @@
 #summary Basic installation and preparation.
+#labels Featured
 
 = Installation/Preparation =
 Depending on how you want to use _flashgraph_, little or no installation may be needed.
