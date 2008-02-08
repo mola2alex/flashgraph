@@ -30,7 +30,10 @@
 		*/
 		public function toString():String {
 			var desc:String = "[" + type.toString();
-			if(val != undefined) desc += ":" + val.toString();
+
+			if(val != undefined && !(val is Function))
+				desc += ":" + val.toString();
+
 			return desc += "]";
 		}
 	}
