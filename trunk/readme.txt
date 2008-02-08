@@ -24,7 +24,7 @@ To install the Grapher2D component, copy the Grapher2D.swc file from the "compon
 Then, from within Flash, the Grapher2D component should appear in the Components panel (Window > Components). If it doesn't, click the small down arrow in the upper right of the Components panel and select "Reload."
 
 
-To use the expression parsing library or to create Grapher2D components in ActionScript, no real "installation" is needed. Flash just needs to be made aware of the location of the source code. To do this, open a new Flash document, and select File > Publish Settings. In the resulting window, select the "Settings..." button next to "ActionScript version." In that window, add the path to the directory containing the "mathlib" folder.  For Grapher2D, you also need to add the following path:
+To use the expression parsing library or to create Grapher2D components in ActionScript, no real "installation" is needed. Flash just needs to be made aware of the location of the source code. To do this, open a new Flash document, and select File > Publish Settings. In the resulting window, select the "Flash" tab, and click the "Settings..." button next to "ActionScript version." In that window, add the path to the directory containing the "mathlib" folder.  For Grapher2D, you also need to add the following path:
     $(AppConfig)/Component Source/ActionScript 3.0/User Interface
 
 

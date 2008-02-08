@@ -73,7 +73,9 @@ package mathlib.expr {
 		* @param ... The constructor may be given no arguments, an array of
 		*  Strings, or a list of Strings. In the first case, no independent
 		*  variable names are set up. In the latter cases, the given strings 
-		*  are passed along to the <code>addVars</code> method.
+		*  are passed along to the <code>addVars</code> method. See the
+		*  documentation for <code>isValidId</code> for details on valid
+		*  variable names.
 		*
 		* <p>The following functions are present in a default Environment:
 		*  <table class="innertable"><th>Function</th><th>Corresponding ActionScript</th><th>Meaning</th>
@@ -122,6 +124,9 @@ package mathlib.expr {
 		*
 		* @throws ArgumentError <code>ArgumentError</code>: A variable name is
 		*  invalid or conflicts with another identifier.
+		*
+		* @see #addVars()
+		* @see #isValidId()
 		*/
 		public function Environment(... args):void {
 			varCount = 0;
@@ -359,7 +364,7 @@ package mathlib.expr {
 			if(opName.length != 1)
 				throw new ArgumentError("operators must be one character in length");
 		
-			if(!isKnownId(opName))
+			if(isKnownId(opName))
 				throw new ArgumentError("operator " + opName + " conflicts with another identifier");
 			
 			if(fn.length != 2)
