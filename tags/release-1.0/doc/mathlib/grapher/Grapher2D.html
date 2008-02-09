@@ -1,0 +1,1709 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../print.css" type="text/css" media="print">
+<meta content="Grapher2D,mathlib.grapher.Grapher2D,ABS_MIN_RANGE,TICKSTYLE_NONE,TICKSTYLE_TICKMARKS,TICKSTYLE_GRID,dx,dy,xres,xmin,xmax,ymin,ymax,showBorder,borderThickness,borderColor,showAxes,axesThickness,axesColor,tickStyle,tickDx,tickDy,isOutside,removeGraph,addFnGraph,addPtGraph,zoom,zoomIn,zoomOut,centerAbout,graphXToLocalX,graphYToLocalY,graphToLocal,localXToGraphX,localYToGraphY,localToGraph,globalToGraph,graphToGlobal,setXRange,setYRange,setRange,setTickDxy" name="keywords">
+<title>mathlib.grapher.Grapher2D</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'Grapher2D - API Documentation';
+				var baseRef = '../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">flashgraph API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../index.html?mathlib/grapher/Grapher2D.html&amp;mathlib/grapher/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;Grapher2D</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#constantSummary">Constants</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class Grapher2D"); titleBar_setSubNav(true,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">mathlib.grapher</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class Grapher2D</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Grapher2D <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> fl.core.UIComponent</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Implements</td><td>fl.managers.IFocusManagerComponent</td>
+</tr>
+</table>
+<p></p>
+ The Grapher2D component presents a Cartesian plane and graphs thereon.
+ The <code>addFnGraph()</code> and <code>addPtGraph()</code> methods can be
+ used to add persistent graphs of functions and points that update with
+ changes of the graph's viewing window.
+ <p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#axesColor">axesColor</a> : uint<div class="summaryTableDescription">
+  The color of the axes and tickmarks.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#axesThickness">axesThickness</a> : uint<div class="summaryTableDescription">
+  The thickness of the lines used to draw the axes and tickmarks.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#borderColor">borderColor</a> : uint<div class="summaryTableDescription"> 
+  The color of the border around the grapher.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#borderThickness">borderThickness</a> : uint<div class="summaryTableDescription">
+  The thickness (in pixels) of the border around the grapher.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#dx">dx</a> : Number<div class="summaryTableDescription">[read-only]
+  The ratio of the grapher's width to its x-range.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#dy">dy</a> : Number<div class="summaryTableDescription">[read-only]
+  The ratio of the grapher's height to its y-range.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#showAxes">showAxes</a> : Boolean<div class="summaryTableDescription">
+  If true, show x- and y-axes in the grapher.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#showBorder">showBorder</a> : Boolean<div class="summaryTableDescription">
+  If true, display a border around the grapher.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#tickDx">tickDx</a> : Number<div class="summaryTableDescription">
+  The spacing of tickmarks along the x-axis.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#tickDy">tickDy</a> : Number<div class="summaryTableDescription">
+  The spacing of tickmarks along the y-axis.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#tickStyle">tickStyle</a> : String<div class="summaryTableDescription">
+  The style of tickmarks to draw.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#xmax">xmax</a> : Number<div class="summaryTableDescription">
+  The maximum x-value to show in the graph.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#xmin">xmin</a> : Number<div class="summaryTableDescription">
+  The minimum x-value to show in the graph.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#xres">xres</a> : Number<div class="summaryTableDescription">
+  The resolution of function graphs.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#ymax">ymax</a> : Number<div class="summaryTableDescription">
+  The maximum y-value to show in the graph.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#ymin">ymin</a> : Number<div class="summaryTableDescription">
+  The minimum y-value to show in the graph.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#Grapher2D()">Grapher2D</a>()</div>
+<div class="summaryTableDescription"> Creates a new Grapher2D component instance.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addFnGraph()">addFnGraph</a>(fn:Function, lineStyle:<a href="LineStyle.html">LineStyle</a> = null):<a href="../grapher/FnGraph.html">FnGraph</a>
+</div>
+<div class="summaryTableDescription">
+  Add the graph of a function to this grapher.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addPtGraph()">addPtGraph</a>(pts:Array, connected:Boolean = true, showPoints:Boolean = true, lineStyle:<a href="LineStyle.html">LineStyle</a> = null):<a href="../grapher/PtGraph.html">PtGraph</a>
+</div>
+<div class="summaryTableDescription">
+  Add the graph of a set of points to this grapher.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#centerAbout()">centerAbout</a>(graphx:Number, graphy:Number):void</div>
+<div class="summaryTableDescription">
+  Center the graph about the given graph coordinate.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#globalToGraph()">globalToGraph</a>(globalpt:Point):Point</div>
+<div class="summaryTableDescription">
+  Convert the given point in global coordinates to one in graph
+  coordinates.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#graphToGlobal()">graphToGlobal</a>(graphpt:Point):Point</div>
+<div class="summaryTableDescription">
+  Convert the given point in graph coordinates to one in global
+  coordinates.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#graphToLocal()">graphToLocal</a>(graphpt:Point):Point</div>
+<div class="summaryTableDescription"> Convert the given graph point to a point local to the grapher.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#graphXToLocalX()">graphXToLocalX</a>(graphx:Number):Number</div>
+<div class="summaryTableDescription">
+  Convert the given graph x-coordinate to an x-coordinate local to the
+  grapher instance.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#graphYToLocalY()">graphYToLocalY</a>(graphy:Number):Number</div>
+<div class="summaryTableDescription">
+  Convert the given graph y-coordinate to a y-coordinate local to the
+  grapher instance.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#isOutside()">isOutside</a>(pt:Point):Boolean</div>
+<div class="summaryTableDescription">
+  Returns true if the given point is outside the viewable range of the
+  grapher.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#localToGraph()">localToGraph</a>(localpt:Point):Point</div>
+<div class="summaryTableDescription">
+  Convert the given grapher-local point to a point in graph coordinates.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#localXToGraphX()">localXToGraphX</a>(localx:Number):Number</div>
+<div class="summaryTableDescription">
+  Convert the given grapher-local x-coordinate to an x-coordinate in the
+  grapher's viewable region.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#localYToGraphY()">localYToGraphY</a>(localy:Number):Number</div>
+<div class="summaryTableDescription">
+  Convert the given grapher-local y-coordinate to a y-coordinate in the 
+  grapher's viewable region.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#removeGraph()">removeGraph</a>(graph:DisplayObject):DisplayObject</div>
+<div class="summaryTableDescription">
+  Remove a graph added by <code>addPtGraph()</code> or
+  <code>addFnGraph()</code>.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setRange()">setRange</a>(n_xmin:Number, n_xmax:Number, n_ymin:Number, n_ymax:Number, doRedraw:Boolean = true):void</div>
+<div class="summaryTableDescription">
+  Set the range of the grapher.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setTickDxy()">setTickDxy</a>(n_tickDx:Number, n_tickDy:Number, doRedraw:Boolean = true):void</div>
+<div class="summaryTableDescription">
+  Set the distance between ticks on the x- and y-axes.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setXRange()">setXRange</a>(n_xmin:Number, n_xmax:Number, doRedraw:Boolean = true):void</div>
+<div class="summaryTableDescription">
+  Set the x-range of the grapher.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setYRange()">setYRange</a>(n_ymin:Number, n_ymax:Number, doRedraw:Boolean = true):void</div>
+<div class="summaryTableDescription">
+  Set the y-range of the grapher.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#zoom()">zoom</a>(factor:Number, graphx:Number, graphy:Number, zoomTicks:Boolean = true):void</div>
+<div class="summaryTableDescription">
+  Zoom the graph window by the specified factor, centering about the
+  given graph coordinate.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#zoomIn()">zoomIn</a>(factor:Number, graphx:Number, graphy:Number, zoomTicks:Boolean = true):void</div>
+<div class="summaryTableDescription">
+  Zoom in on the graph by the given factor.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#zoomOut()">zoomOut</a>(factor:Number, graphx:Number, graphy:Number, zoomTicks:Boolean = true):void</div>
+<div class="summaryTableDescription">
+  Zoom out on the graph by the given factor.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+</table>
+</div>
+<a name="constantSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Constants</div>
+<table id="summaryTableConstant" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#ABS_MIN_RANGE">ABS_MIN_RANGE</a> : Number = 1e-12<div class="summaryTableDescription">[static]
+  The absolute minimum x- and y-range.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#TICKSTYLE_GRID">TICKSTYLE_GRID</a> : String = "grid"<div class="summaryTableDescription">[static]
+  Set this as the value of <code>tickStyle</code> to generate a full-
+  frame grid spaced as tickmarks.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#TICKSTYLE_NONE">TICKSTYLE_NONE</a> : String = "none"<div class="summaryTableDescription">[static]
+  Set this as the value of <code>tickStyle</code> to turn off tickmarks.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#TICKSTYLE_TICKMARKS">TICKSTYLE_TICKMARKS</a> : String = "tickmarks"<div class="summaryTableDescription">[static]
+  Set this as the value of <code>tickStyle</code> to generate small
+  tickmarks from the axes.</div>
+</td><td class="summaryTableOwnerCol">Grapher2D</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="axesColor"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">axesColor</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>axesColor:uint</code>&nbsp;&nbsp;[read-write]<p>
+  The color of the axes and tickmarks. The <code>showAxes</code>
+  property controls the visibility of the axes and the
+  <code>tickStyle</code> property manages tickmarks.
+  </p><p>The default value is <code>#990000 (red)</code>.</p>
+<p>This property can be used as the source for data binding.</p>
+<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get axesColor():uint</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set axesColor(value:uint):void</code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#showAxes" target="">showAxes</a>
+<br>
+<a href="../grapher/Grapher2D.html#tickStyle" target="">tickStyle</a>
+</div>
+</div>
+<a name="axesThickness"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">axesThickness</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>axesThickness:uint</code>&nbsp;&nbsp;[read-write]<p>
+  The thickness of the lines used to draw the axes and tickmarks. A
+  value of 0 indicates a hairline. The <code>showAxes</code> property
+  controls the visibility of the axes, and the <code>tickStyle</code>
+  property manages tickmarks.
+  </p><p>The default value is <code>1</code>.</p>
+<p>This property can be used as the source for data binding.</p>
+<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get axesThickness():uint</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set axesThickness(value:uint):void</code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#showAxes" target="">showAxes</a>
+<br>
+<a href="../grapher/Grapher2D.html#tickStyle" target="">tickStyle</a>
+</div>
+</div>
+<a name="borderColor"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">borderColor</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>borderColor:uint</code>&nbsp;&nbsp;[read-write]<p> 
+  The color of the border around the grapher. The
+  <code>showBorder</code> property controls the border's visibility.
+  </p><p>The default value is <code>#000000 (black)</code>.</p>
+<p>This property can be used as the source for data binding.</p>
+<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get borderColor():uint</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set borderColor(value:uint):void</code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#showBorder" target="">showBorder</a>
+</div>
+</div>
+<a name="borderThickness"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">borderThickness</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>borderThickness:uint</code>&nbsp;&nbsp;[read-write]<p>
+  The thickness (in pixels) of the border around the grapher. A value
+  of 0 indicates a hairline. The <code>showBorder</code> property
+  controls the border's visibility.
+  </p><p>The default value is <code>1</code>.</p>
+<p>This property can be used as the source for data binding.</p>
+<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get borderThickness():uint</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set borderThickness(value:uint):void</code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#showBorder" target="">showBorder</a>
+</div>
+</div>
+<a name="dx"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">dx</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>dx:Number</code>&nbsp;&nbsp;[read-only]<p>
+  The ratio of the grapher's width to its x-range. Put another way, this
+  is the number of physical pixels per a horizontal distance of 1 in the
+  graph. For example, if the grapher is 100 pixels wide,
+  <code>xmin = -10</code> and <code>xmax = 10</code>, then
+  the value of <code>dx</code> will be 5.
+  </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get dx():Number</code>
+<br>
+</div>
+<a name="dy"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">dy</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>dy:Number</code>&nbsp;&nbsp;[read-only]<p>
+  The ratio of the grapher's height to its y-range. See <code>dx</code>
+  for further explanation.
+  </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get dy():Number</code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#dx" target="">dx</a>
+</div>
+</div>
+<a name="showAxes"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">showAxes</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>showAxes:Boolean</code>&nbsp;&nbsp;[read-write]<p>
+  If true, show x- and y-axes in the grapher. The color and thickness
+  of the axes can be controlled with the <code>axesThickness</code> and
+  <code>axesColor</code> properties.
+  </p><p>The default value is <code>true</code>.</p>
+<p>This property can be used as the source for data binding.</p>
+<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get showAxes():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set showAxes(value:Boolean):void</code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#axesThickness" target="">axesThickness</a>
+<br>
+<a href="../grapher/Grapher2D.html#axesColor" target="">axesColor</a>
+</div>
+</div>
+<a name="showBorder"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">showBorder</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>showBorder:Boolean</code>&nbsp;&nbsp;[read-write]<p>
+  If true, display a border around the grapher. The thickness and color
+  of this border can be controlled with the <code>borderThickness</code>
+  and <code>borderColor</code> properties.
+  </p><p>The default value is <code>true</code>.</p>
+<p>This property can be used as the source for data binding.</p>
+<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get showBorder():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set showBorder(value:Boolean):void</code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#borderThickness" target="">borderThickness</a>
+<br>
+<a href="../grapher/Grapher2D.html#borderColor" target="">borderColor</a>
+</div>
+</div>
+<a name="tickDx"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">tickDx</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>tickDx:Number</code>&nbsp;&nbsp;[read-write]<p>
+  The spacing of tickmarks along the x-axis. Note that tickmarks will
+  not be drawn if they would be less than 1 pixel apart.
+  </p><p>The default value is <code>1</code>.</p>
+<p>This property can be used as the source for data binding.</p>
+<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get tickDx():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set tickDx(value:Number):void</code>
+<br>
+<br>
+<span class="label">Throws</span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code></code> &mdash; <code>RangeError</code>: The given value is less
+   than or equal to 0.
+  </td>
+</tr>
+</table>
+</div>
+<a name="tickDy"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">tickDy</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>tickDy:Number</code>&nbsp;&nbsp;[read-write]<p>
+  The spacing of tickmarks along the y-axis. Note that tickmarks will
+  not be drawn if they would be less than 1 pixel apart.
+  </p><p>The default value is <code>1</code>.</p>
+<p>This property can be used as the source for data binding.</p>
+<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get tickDy():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set tickDy(value:Number):void</code>
+<br>
+<br>
+<span class="label">Throws</span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code></code> &mdash; <code>RangeError</code>: The given value is less
+   than or equal to 0.
+  </td>
+</tr>
+</table>
+</div>
+<a name="tickStyle"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">tickStyle</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>tickStyle:String</code>&nbsp;&nbsp;[read-write]<p>
+  The style of tickmarks to draw. This can be one of three values:
+  <ul>
+   <li><code>Grapher2D.TICKSTYLE_NONE</code>: Don't draw tickmarks.</li>
+   <li><code>Grapher2D.TICKSTYLE_TICKMARKS</code>: Draw small tickmarks
+     originating from the axes.</li>
+   <li><code>Grapher2D.TICKSTYLE_GRID</code>: Draw a light grid spaced
+     as tickmarks would be.</li>
+  </ul>
+  The spacing of tickmarks is controlled by the <code>tickDx</code> and
+  <code>tickDy</code> properties. Note that tickmarks will not be drawn
+  if they would be less than 1 pixel apart.
+  </p><p>The default value is <code>Grapher2D.TICKSTYLE_TICKMARKS</code>.</p>
+<p>This property can be used as the source for data binding.</p>
+<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get tickStyle():String</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set tickStyle(value:String):void</code>
+<br>
+<br>
+<span class="label">Throws</span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code></code> &mdash; <code>ArgumentError</code>: The given value is
+   not a valid tick style.
+  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#tickDx" target="">tickDx</a>
+<br>
+<a href="../grapher/Grapher2D.html#tickDy" target="">tickDy</a>
+</div>
+</div>
+<a name="xmax"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">xmax</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>xmax:Number</code>&nbsp;&nbsp;[read-write]<p>
+  The maximum x-value to show in the graph.
+  </p><p>The default value is <code>10</code>.</p>
+<p>This property can be used as the source for data binding.</p>
+<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get xmax():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set xmax(value:Number):void</code>
+<br>
+<br>
+<span class="label">Throws</span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code></code> &mdash; <code>RangeError</code>: either the value is
+   less than or equal to <code>xmin</code> or the resulting range
+   would be less than the minimum.
+  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#ABS_MIN_RANGE" target="">ABS_MIN_RANGE</a>
+</div>
+</div>
+<a name="xmin"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">xmin</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>xmin:Number</code>&nbsp;&nbsp;[read-write]<p>
+  The minimum x-value to show in the graph.
+  </p><p>The default value is <code>-10</code>.</p>
+<p>This property can be used as the source for data binding.</p>
+<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get xmin():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set xmin(value:Number):void</code>
+<br>
+<br>
+<span class="label">Throws</span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code></code> &mdash; <code>RangeError</code>: either the value is
+   greater than or equal to <code>xmax</code> or the resulting range
+   would be less than the minimum.
+  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#ABS_MIN_RANGE" target="">ABS_MIN_RANGE</a>
+</div>
+</div>
+<a name="xres"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">xres</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>xres:Number</code>&nbsp;&nbsp;[read-write]<p>
+  The resolution of function graphs. The unit of this parameter is
+  samples per on-screen pixel, so values closer to zero will result in
+  less smooth, less accurate (but faster) graphs.
+  </p><p>The default value is <code>1</code>.</p>
+<p>This property can be used as the source for data binding.</p>
+<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get xres():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set xres(value:Number):void</code>
+<br>
+<br>
+<span class="label">Throws</span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code></code> &mdash; <code>RangeError</code>: the given value is less
+   than or equal to zero.
+  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#addFnGraph" target="">addFnGraph</a>
+</div>
+</div>
+<a name="ymax"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ymax</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>ymax:Number</code>&nbsp;&nbsp;[read-write]<p>
+  The maximum y-value to show in the graph.
+  </p><p>The default value is <code>10</code>.</p>
+<p>This property can be used as the source for data binding.</p>
+<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get ymax():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set ymax(value:Number):void</code>
+<br>
+<br>
+<span class="label">Throws</span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code></code> &mdash; <code>RangeError</code>: either the value is
+   less than or equal to <code>ymin</code> or the resulting range
+   would be less than the minimum.
+  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#ABS_MIN_RANGE" target="">ABS_MIN_RANGE</a>
+</div>
+</div>
+<a name="ymin"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ymin</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>ymin:Number</code>&nbsp;&nbsp;[read-write]<p>
+  The minimum y-value to show in the graph.
+  </p><p>The default value is <code>-10</code>.</p>
+<p>This property can be used as the source for data binding.</p>
+<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get ymin():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set ymin(value:Number):void</code>
+<br>
+<br>
+<span class="label">Throws</span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code></code> &mdash; <code>RangeError</code>: either the value is
+   greater than or equal to <code>ymax</code> or the resulting range
+   would be less than the minimum.
+  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#ABS_MIN_RANGE" target="">ABS_MIN_RANGE</a>
+</div>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="Grapher2D()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">Grapher2D</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function Grapher2D()</code><p> Creates a new Grapher2D component instance. </p></div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="addFnGraph()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addFnGraph</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addFnGraph(fn:Function, lineStyle:<a href="LineStyle.html">LineStyle</a> = null):<a href="../grapher/FnGraph.html">FnGraph</a></code><p>
+  Add the graph of a function to this grapher. The quality of the graph
+  can be controlled to an extent by the value of <code>xres</code>.
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">fn</span>:Function</code> &mdash; The function to graph. This function must be capable of
+   being called with one Number argument and must return a Number.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">lineStyle</span>:<a href="LineStyle.html">LineStyle</a></code> (default = <code>null</code>)<code></code> &mdash; The line style to use when drawing the graph of the
+   function. If it is given as <code>null</code>,
+   <code>LineStyle.Hairline</code> is used.
+  </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../grapher/FnGraph.html">FnGraph</a></code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#xres" target="">xres</a>
+<br>
+<a href="LineStyle.html#Hairline" target="">LineStyle.Hairline</a>
+</div>
+</div>
+<a name="addPtGraph()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addPtGraph</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addPtGraph(pts:Array, connected:Boolean = true, showPoints:Boolean = true, lineStyle:<a href="LineStyle.html">LineStyle</a> = null):<a href="../grapher/PtGraph.html">PtGraph</a></code><p>
+  Add the graph of a set of points to this grapher.
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pts</span>:Array</code> &mdash; An array of <code>flash.geom.Point</code>s to be drawn.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">connected</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; True to draw lines connecting the points in order of
+   their appearance in <code>_pts</code>
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">showPoints</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; True to draw a small circle at the location of each
+   point. Note: if <code>connected</code> and this property are both
+   false, there will be nothing to draw.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">lineStyle</span>:<a href="LineStyle.html">LineStyle</a></code> (default = <code>null</code>)<code></code> &mdash; The style of line to use for drawing connecting
+   lines if <code>connected</code> is true and for points if
+   <code>showPoints</code> is true. If its value is <code>null</code>,
+   <code>LineStyle.Hairline</code> is used.
+  </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../grapher/PtGraph.html">PtGraph</a></code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="LineStyle.html#Hairline" target="">LineStyle.Hairline</a>
+</div>
+</div>
+<a name="centerAbout()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">centerAbout</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function centerAbout(graphx:Number, graphy:Number):void</code><p>
+  Center the graph about the given graph coordinate. This is just a
+  wrapper for
+  <div class='listing'><pre>zoom(1, graphx, graphy)</pre></div>
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">graphx</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">graphy</span>:Number</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#zoom()" target="">zoom()</a>
+</div>
+</div>
+<a name="globalToGraph()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">globalToGraph</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function globalToGraph(globalpt:Point):Point</code><p>
+  Convert the given point in global coordinates to one in graph
+  coordinates.
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">globalpt</span>:Point</code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Point</code></td>
+</tr>
+</table>
+</div>
+<a name="graphToGlobal()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">graphToGlobal</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function graphToGlobal(graphpt:Point):Point</code><p>
+  Convert the given point in graph coordinates to one in global
+  coordinates.
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">graphpt</span>:Point</code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Point</code></td>
+</tr>
+</table>
+</div>
+<a name="graphToLocal()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">graphToLocal</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function graphToLocal(graphpt:Point):Point</code><p> Convert the given graph point to a point local to the grapher. </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">graphpt</span>:Point</code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Point</code></td>
+</tr>
+</table>
+</div>
+<a name="graphXToLocalX()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">graphXToLocalX</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function graphXToLocalX(graphx:Number):Number</code><p>
+  Convert the given graph x-coordinate to an x-coordinate local to the
+  grapher instance.
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">graphx</span>:Number</code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Number</code></td>
+</tr>
+</table>
+</div>
+<a name="graphYToLocalY()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">graphYToLocalY</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function graphYToLocalY(graphy:Number):Number</code><p>
+  Convert the given graph y-coordinate to a y-coordinate local to the
+  grapher instance.
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">graphy</span>:Number</code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Number</code></td>
+</tr>
+</table>
+</div>
+<a name="isOutside()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">isOutside</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function isOutside(pt:Point):Boolean</code><p>
+  Returns true if the given point is outside the viewable range of the
+  grapher.
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pt</span>:Point</code> &mdash; The point to test.
+  </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code></td>
+</tr>
+</table>
+</div>
+<a name="localToGraph()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">localToGraph</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function localToGraph(localpt:Point):Point</code><p>
+  Convert the given grapher-local point to a point in graph coordinates.
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">localpt</span>:Point</code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Point</code></td>
+</tr>
+</table>
+</div>
+<a name="localXToGraphX()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">localXToGraphX</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function localXToGraphX(localx:Number):Number</code><p>
+  Convert the given grapher-local x-coordinate to an x-coordinate in the
+  grapher's viewable region.
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">localx</span>:Number</code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Number</code></td>
+</tr>
+</table>
+</div>
+<a name="localYToGraphY()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">localYToGraphY</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function localYToGraphY(localy:Number):Number</code><p>
+  Convert the given grapher-local y-coordinate to a y-coordinate in the 
+  grapher's viewable region.
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">localy</span>:Number</code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Number</code></td>
+</tr>
+</table>
+</div>
+<a name="removeGraph()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">removeGraph</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function removeGraph(graph:DisplayObject):DisplayObject</code><p>
+  Remove a graph added by <code>addPtGraph()</code> or
+  <code>addFnGraph()</code>.
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">graph</span>:DisplayObject</code> &mdash; The graph to remove. This should be a value returned by
+   <code>addFnGraph()</code> or <code>addPtGraph()</code>.
+  </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>DisplayObject</code></td>
+</tr>
+</table>
+</div>
+<a name="setRange()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setRange</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setRange(n_xmin:Number, n_xmax:Number, n_ymin:Number, n_ymax:Number, doRedraw:Boolean = true):void</code><p>
+  Set the range of the grapher. Use this function instead of setting
+  the range properties if you are changing many at once and would like
+  to avoid intermediate redraws.
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">n_xmin</span>:Number</code> &mdash; The new value of <code>xmin</code>.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">n_xmax</span>:Number</code> &mdash; The new value of <code>xmax</code>.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">n_ymin</span>:Number</code> &mdash; The new value of <code>ymin</code>.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">n_ymax</span>:Number</code> &mdash; The new value of <code>ymax</code>.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">doRedraw</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code></code> &mdash; <code>RangeError</code>: Either one of the
+   <code>min</code>s is greater than or equal to its respective
+   <code>max</code> or the values would result in the graph having a
+   range below the minimum.
+  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#xmin" target="">xmin</a>
+<br>
+<a href="../grapher/Grapher2D.html#xmax" target="">xmax</a>
+<br>
+<a href="../grapher/Grapher2D.html#ymin" target="">ymin</a>
+<br>
+<a href="../grapher/Grapher2D.html#ymax" target="">ymax</a>
+<br>
+<a href="../grapher/Grapher2D.html#ABS_MIN_RANGE" target="">ABS_MIN_RANGE</a>
+</div>
+</div>
+<a name="setTickDxy()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setTickDxy</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setTickDxy(n_tickDx:Number, n_tickDy:Number, doRedraw:Boolean = true):void</code><p>
+  Set the distance between ticks on the x- and y-axes. Use this function
+  instead of setting the <code>tickDx</code> and <code>tickDy</code>
+  properties if you are changing both at once and would like to avoid
+  an intermediate redraw.
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">n_tickDx</span>:Number</code> &mdash; The new value of <code>tickDx</code>.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">n_tickDy</span>:Number</code> &mdash; The new value of <code>tickDy</code>.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">doRedraw</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; If true, redraw the graph after this change.
+  </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code></code> &mdash; <code>RangeError</code>: One of the new tick
+   spacing values is <= 0.
+  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#tickDx" target="">tickDx</a>
+<br>
+<a href="../grapher/Grapher2D.html#tickDy" target="">tickDy</a>
+</div>
+</div>
+<a name="setXRange()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setXRange</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setXRange(n_xmin:Number, n_xmax:Number, doRedraw:Boolean = true):void</code><p>
+  Set the x-range of the grapher. Use this function instead of setting
+  the <code>xmin</code> and <code>xmax</code> properties if you are
+  changing both simultaneously and would like to avoid an intermediate
+  redraw.
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">n_xmin</span>:Number</code> &mdash; The new value of <code>xmin</code>.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">n_xmax</span>:Number</code> &mdash; The new value of <code>xmax</code>.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">doRedraw</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; If true, redraw the graph after this change.
+  </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code></code> &mdash; <code>RangeError</code>: Either
+   <code>n_xmin >= n_xmax</code> or the values would result in the graph
+   having a range below the minimum.
+  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#xmin" target="">xmin</a>
+<br>
+<a href="../grapher/Grapher2D.html#xmax" target="">xmax</a>
+<br>
+<a href="../grapher/Grapher2D.html#ABS_MIN_RANGE" target="">ABS_MIN_RANGE</a>
+</div>
+</div>
+<a name="setYRange()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setYRange</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setYRange(n_ymin:Number, n_ymax:Number, doRedraw:Boolean = true):void</code><p>
+  Set the y-range of the grapher. Use this function instead of setting
+  the <code>ymin</code> and <code>ymax</code> properties if you are
+  changing both simultaneously and would like to avoid an intermediate
+  redraw.
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">n_ymin</span>:Number</code> &mdash; The new value of <code>ymin</code>.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">n_ymax</span>:Number</code> &mdash; The new value of <code>ymax</code>.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">doRedraw</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; If true, redraw the graph after this change.
+  </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code></code> &mdash; <code>RangeError</code>: Either
+   <code>n_ymin >= n_ymax</code> or the values would result in the graph
+   having a range below the minimum.
+  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#ymin" target="">ymin</a>
+<br>
+<a href="../grapher/Grapher2D.html#ymax" target="">ymax</a>
+<br>
+<a href="../grapher/Grapher2D.html#ABS_MIN_RANGE" target="">ABS_MIN_RANGE</a>
+</div>
+</div>
+<a name="zoom()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">zoom</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function zoom(factor:Number, graphx:Number, graphy:Number, zoomTicks:Boolean = true):void</code><p>
+  Zoom the graph window by the specified factor, centering about the
+  given graph coordinate.
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">factor</span>:Number</code> &mdash; The factor by which the range of the graph will be
+   multiplied. For example, a value of 0.5 will result in the total
+   visible range of the graph being halved--zooming in by a factor of 2.
+   If this is confusing, you may prefer the <code>zoomIn()</code> and
+   <code>zoomOut()</code> functions.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">graphx</span>:Number</code> &mdash; The x-coordinate of the new center of the graph after
+   the zoom. If it is NaN, the x-coordinate of the center of the graph
+   will be used.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">graphy</span>:Number</code> &mdash; The y-coordinate of the new center of the graph after
+   the zoom. If it is NaN, the x-coordinate of the center of the graph
+   will be used.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">zoomTicks</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; If true, the <code>tickDx</code> and
+   <code>tickDy</code> properties will also be multiplied by
+   <code>factor</code>, resulting in the ticks remaining an absolute
+   (on-screen pixel) distance apart.
+  </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code></code> &mdash; <code>ArgumentError</code>: The given factor is
+   less than or equal to 0.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code></code> &mdash; <code>RangeError</code>: The zooming would result
+   in the range of the graph falling below the minimum.
+  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#zoomOut()" target="">zoomOut()</a>
+<br>
+<a href="../grapher/Grapher2D.html#zoomIn()" target="">zoomIn()</a>
+<br>
+<a href="../grapher/Grapher2D.html#ABS_MIN_RANGE" target="">ABS_MIN_RANGE</a>
+</div>
+</div>
+<a name="zoomIn()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">zoomIn</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function zoomIn(factor:Number, graphx:Number, graphy:Number, zoomTicks:Boolean = true):void</code><p>
+  Zoom in on the graph by the given factor. This is just a wrapper for
+  <div class='listing'><pre>zoom(1 / factor, graphx, graphy, zoomTicks)</pre></div>
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">factor</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">graphx</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">graphy</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">zoomTicks</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#zoom()" target="">zoom()</a>
+</div>
+</div>
+<a name="zoomOut()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">zoomOut</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function zoomOut(factor:Number, graphx:Number, graphy:Number, zoomTicks:Boolean = true):void</code><p>
+  Zoom out on the graph by the given factor. This is just an alias of
+  the <code>zoom()</code> method for convenience.
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">factor</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">graphx</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">graphy</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">zoomTicks</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#zoom()" target="">zoom()</a>
+</div>
+</div>
+<a name="constantDetail"></a>
+<div class="detailSectionHeader">Constant detail</div>
+<a name="ABS_MIN_RANGE"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ABS_MIN_RANGE</td><td class="detailHeaderType">constant</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const ABS_MIN_RANGE:Number = 1e-12</code><p>
+  The absolute minimum x- and y-range. This is an arbitrary limit
+  obtained by experimentation&#x2014;in theory there should be no limit,
+  but if we step too low, Flash starts to have serious issues with the
+  sort of numbers we'd have to deal with (it slows down and eventually
+  hangs). The methods for adjusting the view and zooming check this
+  value and throw a <code>RangeError</code> if a change would go below
+  this value. The whole situation is unfortunate but unavoidable for the
+  time being.
+  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#zoom()" target="">zoom()</a>
+<br>
+<a href="../grapher/Grapher2D.html#setRange()" target="">setRange()</a>
+</div>
+</div>
+<a name="TICKSTYLE_GRID"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">TICKSTYLE_GRID</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const TICKSTYLE_GRID:String = "grid"</code><p>
+  Set this as the value of <code>tickStyle</code> to generate a full-
+  frame grid spaced as tickmarks.
+  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#tickStyle" target="">tickStyle</a>
+</div>
+</div>
+<a name="TICKSTYLE_NONE"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">TICKSTYLE_NONE</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const TICKSTYLE_NONE:String = "none"</code><p>
+  Set this as the value of <code>tickStyle</code> to turn off tickmarks.
+  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#tickStyle" target="">tickStyle</a>
+</div>
+</div>
+<a name="TICKSTYLE_TICKMARKS"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">TICKSTYLE_TICKMARKS</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const TICKSTYLE_TICKMARKS:String = "tickmarks"</code><p>
+  Set this as the value of <code>tickStyle</code> to generate small
+  tickmarks from the axes.
+  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../grapher/Grapher2D.html#tickStyle" target="">tickStyle</a>
+</div>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->
