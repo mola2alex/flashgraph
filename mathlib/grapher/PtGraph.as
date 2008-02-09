@@ -121,7 +121,6 @@
 		public function get pts():Array { return _pts; }
 		/** @private */
 		public function set pts(n_pts:Array):void {
-			trace("pts set fired");
 			_pts = n_pts;
 			redraw();
 		}

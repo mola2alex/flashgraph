@@ -19,7 +19,7 @@
 		private var _showAxes:Boolean = true, _axesThickness:uint = 1, _axesColor:uint = 0x990000;
 		private var _tickStyle:String = TICKSTYLE_TICKMARKS, _tickDx:Number = 1, _tickDy:Number = 1;
 		
-		private static const TICKSIZE:uint = 5, MINTICKSTEP:uint = 2, GRIDTICKSALPHA:Number = 0.1;
+		private static const MAXTICKSIZE:uint = 5, MINTICKSTEP:uint = 2, GRIDTICKSALPHA:Number = 0.1;
 		private static const INV_RANGE:String = "range", INV_CREATE:String = "create", INV_SIZE:String = "size";
 
 		/**
@@ -164,6 +164,11 @@
 			var firstYTick:Number = _tickDy * Math.ceil(_ymin / _tickDy);
 		
 			if(_tickStyle == TICKSTYLE_TICKMARKS) {
+				// Select the tick size automatically to be no greater than
+				// MAXTICKSIZE, but also not bigger than the distance between
+				// tickmarks.
+				var tickSize:int = Math.min(txstep, tystep, MAXTICKSIZE);
+			
 				xorigin = graphXToLocalX(0);
 				yorigin = graphYToLocalY(0);
 				
@@ -171,7 +176,7 @@
 				if(_ymin <= 0 && _ymax >= 0 && txstep > MINTICKSTEP) {
 					for(i = firstXTick; i <= _xmax; i += _tickDx) {
 						graphMoveTo(gr, i, 0);
-						gr.lineTo(graphXToLocalX(i), yorigin - TICKSIZE);
+						gr.lineTo(graphXToLocalX(i), yorigin - tickSize);
 					}
 				}
 				
@@ -179,7 +184,7 @@
 				if(_xmin <= 0 && _xmax >= 0 && tystep > MINTICKSTEP) {
 					for(i = firstYTick; i <= _ymax; i += _tickDy) {
 						graphMoveTo(gr, 0, i);
-						gr.lineTo(xorigin + TICKSIZE, graphYToLocalY(i));
+						gr.lineTo(xorigin + tickSize, graphYToLocalY(i));
 					}
 				}
 			}
