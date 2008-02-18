@@ -1,5 +1,7 @@
 #summary Future things to implement.
 
+= Flex support =
+
 = Grapher2D =
   * Parametric graphs?
     * Shouldn't be bad to implement, and would certainly be interesting
