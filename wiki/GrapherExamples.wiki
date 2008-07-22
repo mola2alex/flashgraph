@@ -23,11 +23,11 @@ import mathlib.grapher.*;
 Now let's define the functions we want to draw. For now, we'll just write these in !ActionScript. They must take one Number argument and return a Number.
 {{{
 function f(x:Number):Number {
-    return Math.sin(2 * Math.PI * x);
+    return Math.sin(2 * Math.PI * x);
 }
 
 function g(x:Number):Number {
-    return 5 * Math.sin(Math.PI * x)
+    return 5 * Math.sin(Math.PI * x)
 }
 }}}
 
