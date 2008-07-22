@@ -3,6 +3,8 @@
 = Flex support =
 
 = Grapher2D =
+  * Value labels for tickmarks
+
   * Parametric graphs?
     * Shouldn't be bad to implement, and would certainly be interesting
 
