@@ -125,7 +125,7 @@
 			redraw();
 		}
 		
-		/** True if the points should be draw with lines connecting them. */
+		/** True if the points should be drawn with lines connecting them. */
 		public function get connected():Boolean { return _connected; }
 		/** @private */
 		public function set connected(n_connected:Boolean):void {

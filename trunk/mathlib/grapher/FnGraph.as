@@ -10,6 +10,7 @@
 		private var _parent:Grapher2D;
 		private var _lineStyle:LineStyle;
 		private var _fn:Function;
+		private var _xres:Number;
 
 		/**
 		* Creates a new FnGraph object. End-users should never have reason to
@@ -22,13 +23,22 @@
 		* @param n_lineStyle The line style to use when drawing the graph of the
 		*  function. If it is given as <code>null</code>,
 		*  <code>LineStyle.Hairline</code> is used.
+		* @param n_xres The resolution at which to draw the graph. The unit of
+		*  this parameter is samples per on-screen pixel, so values closer to
+		*  zero will result in less smooth, less accurate (but faster) graphs.
+		* @throws RangeError <code>RangeError</code>: the given value for
+		*  <code>n_xres</code> is less than or equal to zero.
 		* @see Grapher2D#addFnGraph()
 		* @see LineStyle#Hairline
 		*/
-		public function FnGraph(n_parentGrapher:Grapher2D, n_fn:Function, n_lineStyle:LineStyle = null):void {
+		public function FnGraph(n_parentGrapher:Grapher2D, n_fn:Function, n_lineStyle:LineStyle = null, n_xres:Number = 1):void {
 			super();
 
+			if(n_xres <= 0)
+				throw new RangeError("xres must be a positive number");
+
 			_fn = n_fn;
+			_xres = n_xres;
 			_parent = n_parentGrapher;
 			
 			if(n_lineStyle == null) _lineStyle = LineStyle.Hairline;
@@ -42,15 +52,15 @@
 		
 		/**
 		* @private
-		* Draw the graph. The function's value is sampled parentGrapher.xres
-		* times per on-screen pixel, and the results are connected by a straight
-		* line in the given LineStyle.
+		* Draw the graph. The function's value is sampled _xres times per
+		* on-screen pixel, and the results are connected by a straight line in
+		* the given LineStyle.
 		*/
 		internal function draw():void {
 			// parentGrapher.dx is the ratio of real on-screen pixels to a
 			// distance of 1 in graph units, so this value is the distance
 			// between samples we want to take.
-			const xstep:Number = 1 / (_parent.xres * _parent.dx);
+			const xstep:Number = 1 / (_xres * _parent.dx);
 			var curx:Number, cury:Number;
 			var oldx:Number, oldy:Number;
 
@@ -92,7 +102,7 @@
 		
 		// We can hit the 32768 pixel limit on lines really quickly if we have a
 		// discontinuity, so we do a heavy-handed (but fast) truncation of y's
-		// outside of the viewing window. If xres is high enough, the user
+		// outside of the viewing window. If _xres is high enough, the user
 		// shouldn't notice this (it'll just be on the last sample before it
 		// jumps out of sight).
 		private function truncateY(cury:Number):Number {
@@ -110,6 +120,17 @@
 		/** @private */
 		public function set lineStyle(n_lineStyle:LineStyle):void {
 			_lineStyle = n_lineStyle;
+			redraw();
+		}
+		
+		/**
+		* The resolution of the function graph.
+		* @see #FnGraph()
+		*/
+		public function get xres():Number { return _xres; }
+		/** @private */
+		public function set xres(n_xres:Number):void {
+			_xres = n_xres;
 			redraw();
 		}
 		

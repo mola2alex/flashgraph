@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../print.css" type="text/css" media="print">
-<meta content="Grapher2D,mathlib.grapher.Grapher2D,ABS_MIN_RANGE,TICKSTYLE_NONE,TICKSTYLE_TICKMARKS,TICKSTYLE_GRID,dx,dy,xres,xmin,xmax,ymin,ymax,showBorder,borderThickness,borderColor,showAxes,axesThickness,axesColor,tickStyle,tickDx,tickDy,isOutside,removeGraph,addFnGraph,addPtGraph,zoom,zoomIn,zoomOut,centerAbout,graphXToLocalX,graphYToLocalY,graphToLocal,localXToGraphX,localYToGraphY,localToGraph,globalToGraph,graphToGlobal,setXRange,setYRange,setRange,setTickDxy" name="keywords">
+<meta content="Grapher2D,mathlib.grapher.Grapher2D,ABS_MIN_RANGE,TICKSTYLE_NONE,TICKSTYLE_TICKMARKS,TICKSTYLE_GRID,dx,dy,xmin,xmax,ymin,ymax,showBorder,borderThickness,borderColor,showAxes,axesThickness,axesColor,tickStyle,tickDx,tickDy,isOutside,removeGraph,addFnGraph,addPtGraph,zoom,zoomIn,zoomOut,centerAbout,graphXToLocalX,graphYToLocalY,graphToLocal,localXToGraphX,localYToGraphY,localToGraph,globalToGraph,graphToGlobal,setXRange,setYRange,setRange,setTickDxy" name="keywords">
 <title>mathlib.grapher.Grapher2D</title>
 </head>
 <body>
@@ -126,11 +126,6 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </td><td class="summaryTableOwnerCol">Grapher2D</td>
 </tr>
 <tr class="">
-<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#xres">xres</a> : Number<div class="summaryTableDescription">
-  The resolution of function graphs.</div>
-</td><td class="summaryTableOwnerCol">Grapher2D</td>
-</tr>
-<tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#ymax">ymax</a> : Number<div class="summaryTableDescription">
   The maximum y-value to show in the graph.</div>
 </td><td class="summaryTableOwnerCol">Grapher2D</td>
@@ -159,7 +154,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#addFnGraph()">addFnGraph</a>(fn:Function, lineStyle:<a href="LineStyle.html">LineStyle</a> = null):<a href="../grapher/FnGraph.html">FnGraph</a>
+<a class="signatureLink" href="#addFnGraph()">addFnGraph</a>(fn:Function, lineStyle:<a href="LineStyle.html">LineStyle</a> = null, xres:Number = 1):<a href="../grapher/FnGraph.html">FnGraph</a>
 </div>
 <div class="summaryTableDescription">
   Add the graph of a function to this grapher.</div>
@@ -743,42 +738,6 @@ showHideInherited();
 <a href="../grapher/Grapher2D.html#ABS_MIN_RANGE" target="">ABS_MIN_RANGE</a>
 </div>
 </div>
-<a name="xres"></a>
-<table cellspacing="0" cellpadding="0" class="detailHeader">
-<tr>
-<td class="detailHeaderName">xres</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
-</tr>
-</table>
-<div class="detailBody">
-<code>xres:Number</code>&nbsp;&nbsp;[read-write]<p>
-  The resolution of function graphs. The unit of this parameter is
-  samples per on-screen pixel, so values closer to zero will result in
-  less smooth, less accurate (but faster) graphs.
-  </p><p>The default value is <code>1</code>.</p>
-<p>This property can be used as the source for data binding.</p>
-<span class="label">Implementation</span>
-<br>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get xres():Number</code>
-<br>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set xres(value:Number):void</code>
-<br>
-<br>
-<span class="label">Throws</span>
-<br>
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="20"></td><td><code></code> &mdash; <code>RangeError</code>: the given value is less
-   than or equal to zero.
-  </td>
-</tr>
-</table>
-<p>
-<span class="label">See also</span>
-</p>
-<div class="seeAlso">
-<a href="../grapher/Grapher2D.html#addFnGraph" target="">addFnGraph</a>
-</div>
-</div>
 <a name="ymax"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
@@ -868,7 +827,7 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public function addFnGraph(fn:Function, lineStyle:<a href="LineStyle.html">LineStyle</a> = null):<a href="../grapher/FnGraph.html">FnGraph</a></code><p>
+<code>public function addFnGraph(fn:Function, lineStyle:<a href="LineStyle.html">LineStyle</a> = null, xres:Number = 1):<a href="../grapher/FnGraph.html">FnGraph</a></code><p>
   Add the graph of a function to this grapher. The quality of the graph
   can be controlled to an extent by the value of <code>xres</code>.
   </p><span class="label">Parameters</span>
@@ -887,6 +846,14 @@ showHideInherited();
    <code>LineStyle.Hairline</code> is used.
   </td>
 </tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">xres</span>:Number</code> (default = <code>1</code>)<code></code> &mdash; The desired resolution of the function graph. See
+   the constructor for <code>FnGraph</code> for details.
+  </td>
+</tr>
 </table>
 <p></p>
 <span class="label">Returns</span>
@@ -899,9 +866,9 @@ showHideInherited();
 <span class="label">See also</span>
 </p>
 <div class="seeAlso">
-<a href="../grapher/Grapher2D.html#xres" target="">xres</a>
-<br>
 <a href="LineStyle.html#Hairline" target="">LineStyle.Hairline</a>
+<br>
+<a href="FnGraph.html#FnGraph()" target="">FnGraph.FnGraph()</a>
 </div>
 </div>
 <a name="addPtGraph()"></a>
@@ -952,6 +919,15 @@ showHideInherited();
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="20"></td><td><code><a href="../grapher/PtGraph.html">PtGraph</a></code></td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code></code> &mdash; <code>RangeError</code>: the given value for
+   <code>xres</code> is less than or equal to zero.
+  </td>
 </tr>
 </table>
 <p>
