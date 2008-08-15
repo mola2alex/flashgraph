@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FLEXDIR=~/flex2_sdk_hf1
+FLEXDIR=~/flex2_sdk_hf3
 ASDOC=$FLEXDIR/bin/asdoc
 ASDOCTEMPLATES=$FLEXDIR/asdoc/templates
 DEST=doc
