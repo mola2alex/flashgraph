@@ -13,7 +13,7 @@
 	*/
 	public class Grapher2D extends UIComponent implements IFocusManagerComponent {
 		private var _axesSh:Shape, _borderSh:Shape, _graphSp:Sprite, _maskSh:Shape, _hitArea:Sprite;
-		private var _dx:Number, _dy:Number, _xres:Number = 1;
+		private var _dx:Number, _dy:Number;
 		private var _xmin:Number = -10, _xmax:Number = 10, _ymin:Number = -10, _ymax:Number = 10;
 		private var _showBorder:Boolean = true, _borderThickness:uint = 1, _borderColor:uint = 0;
 		private var _showAxes:Boolean = true, _axesThickness:uint = 1, _axesColor:uint = 0x990000;
@@ -312,14 +312,16 @@
 		* can be controlled to an extent by the value of <code>xres</code>.
 		* @param fn The function to graph. This function must be capable of
 		*  being called with one Number argument and must return a Number.
-		* @param _lineStyle The line style to use when drawing the graph of the
+		* @param lineStyle The line style to use when drawing the graph of the
 		*  function. If it is given as <code>null</code>,
 		*  <code>LineStyle.Hairline</code> is used.
-		* @see #xres
+		* @param xres The desired resolution of the function graph. See
+		*  the constructor for <code>FnGraph</code> for details.
 		* @see LineStyle#Hairline
+		* @see FnGraph#FnGraph()
 		*/
-		public function addFnGraph(fn:Function, lineStyle:LineStyle = null):FnGraph {
-			var fg:FnGraph = new FnGraph(this, fn, lineStyle);
+		public function addFnGraph(fn:Function, lineStyle:LineStyle = null, xres:Number = 1):FnGraph {
+			var fg:FnGraph = new FnGraph(this, fn, lineStyle, xres);
 			_graphSp.addChild(fg);
 			fg.draw();
 			
@@ -338,6 +340,8 @@
 		*  lines if <code>connected</code> is true and for points if
 		*  <code>showPoints</code> is true. If its value is <code>null</code>,
 		*  <code>LineStyle.Hairline</code> is used.
+		* @throws RangeError <code>RangeError</code>: the given value for
+		*  <code>xres</code> is less than or equal to zero.
 		* @see LineStyle#Hairline
 		*/
 		public function addPtGraph(pts:Array, connected:Boolean = true, showPoints:Boolean = true, lineStyle:LineStyle = null):PtGraph {
@@ -603,27 +607,6 @@
 		* @see #dx
 		*/
 		public function get dy():Number { return _dy; }
-		
-		[Bindable]
-		[Inspectable(defaultValue = 1)]
-		/**
-		* The resolution of function graphs. The unit of this parameter is
-		* samples per on-screen pixel, so values closer to zero will result in
-		* less smooth, less accurate (but faster) graphs.
-		* @default 1
-		* @throws RangeError <code>RangeError</code>: the given value is less
-		*  than or equal to zero.
-		* @see #addFnGraph
-		*/
-		public function get xres():Number { return _xres; }
-		/** @private */
-		public function set xres(n_xres:Number):void {
-			if(n_xres <= 0)
-				throw new RangeError("xres must be a positive number");
-
-			_xres = n_xres;
-			drawGraphs();
-		}
 		
 		[Bindable]
 		[Inspectable(defaultValue = -10)]
