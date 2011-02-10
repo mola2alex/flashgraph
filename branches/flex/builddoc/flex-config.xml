@@ -1,0 +1,17 @@
+<flex-config>
+ <compiler>
+  <!-- List of SWC files or directories to compile against but to omit from linking. -->
+  <external-library-path>
+   <path-element>/Applications/Adobe CS3/Adobe Flash CS3/Configuration/ActionScript 3.0/Classes/playerglobal.swc</path-element>
+  </external-library-path>
+
+  <!-- List of SWC files or directories that contain SWC files. -->
+  <library-path>
+   <path-element>fl-shim.swc</path-element>
+  </library-path>
+
+  <show-actionscript-warnings>true</show-actionscript-warnings>
+  <strict>true</strict>
+  <as3>true</as3>
+ </compiler>
+</flex-config>
